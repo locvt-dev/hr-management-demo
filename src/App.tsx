@@ -5,6 +5,9 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 // Router
 import { router } from '@/routers';
 
+// Theme
+import theme from '@/themes';
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -17,7 +20,7 @@ const queryClient = new QueryClient({
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <RouterProvider
           router={router}
           future={{
