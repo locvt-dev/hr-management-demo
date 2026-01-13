@@ -1,0 +1,124 @@
+{
+  "departments": [
+    {
+      "id": 1,
+      "name": "Engineering",
+      "description": "Software development department"
+    },
+    {
+      "id": 2,
+      "name": "Human Resources",
+      "description": "People and culture department"
+    }
+  ],
+
+  "teams": [
+    {
+      "id": 1,
+      "name": "Backend Team",
+      "description": "API and microservices",
+      "department_id": 1,
+      "job_description_id": 1
+    },
+    {
+      "id": 2,
+      "name": "Frontend Team",
+      "description": "Web UI development",
+      "department_id": 1,
+      "job_description_id": 2
+    },
+    {
+      "id": 3,
+      "name": "Recruitment Team",
+      "description": "Hiring and onboarding",
+      "department_id": 2,
+      "job_description_id": 3
+    }
+  ],
+
+  "jobDescriptions": [
+    {
+      "id": 1,
+      "name": "Backend Developer",
+      "description": "Responsible for backend services and APIs",
+      "file_url": "http://res.cloudinary.com/dgp4sl6dl/raw/upload/v1768269641/docs/job-descriptions/back-end.png"
+    },
+    {
+      "id": 2,
+      "name": "Frontend Developer",
+      "description": "Responsible for UI and frontend logic",
+      "file_url": "http://res.cloudinary.com/dgp4sl6dl/raw/upload/v1768269623/docs/job-descriptions/front-end.png"
+    },
+    {
+      "id": 3,
+      "name": "HR Specialist",
+      "description": "Responsible for recruitment process",
+      "file_url": "https://res.cloudinary.com/dgp4sl6dl/raw/upload/v1768269606/docs/job-descriptions/human-resource.png"
+    }
+  ],
+
+  "users": [
+    {
+      "id": 1,
+      "name": "John Nguyen",
+      "email": "john.nguyen@company.com",
+      "phone": "0901234567",
+      "role": "developer",
+      "team_id": 1
+    },
+    {
+      "id": 2,
+      "name": "Linh Tran",
+      "email": "linh.tran@company.com",
+      "phone": "0912345678",
+      "role": "developer",
+      "team_id": 2
+    },
+    {
+      "id": 3,
+      "name": "Minh Le",
+      "email": "minh.le@company.com",
+      "phone": "0923456789",
+      "role": "hr",
+      "team_id": 3
+    }
+  ],
+
+  "performances": [
+    {
+      "id": 1,
+      "task_name": "Implement Authentication API",
+      "task_description": "Build JWT authentication service",
+      "assign_date": "2026-01-01",
+      "est_complete_date": "2026-01-10",
+      "complete_date": "2026-01-09",
+      "user_id": 1
+    },
+    {
+      "id": 2,
+      "task_name": "Build Dashboard UI",
+      "task_description": "Create admin dashboard layout",
+      "assign_date": "2026-01-05",
+      "est_complete_date": "2026-01-15",
+      "complete_date": null,
+      "user_id": 2
+    }
+  ],
+
+  "contracts": [
+    {
+      "id": 1,
+      "name": "Don xin thoi viec",
+      "description": "Don xin thoi viec",
+      "file_url": "http://res.cloudinary.com/dgp4sl6dl/raw/upload/v1768268815/docs/%25C4%2590%25C6%25A1n%2520xin%2520th%25C3%25B4i%2520vi%25E1%25BB%2587c.docx",
+      "user_id": 1
+    },
+    {
+      "id": 2,
+      "name": "Don xin thang chuc",
+      "description": "Don xin thang chuc",
+      "file_url": "http://res.cloudinary.com/dgp4sl6dl/raw/upload/v1768268839/docs/%25C4%2590%25C6%25A1n%2520xin%2520th%25C4%2583ng%2520c%25E1%25BA%25A5p.docx",
+      "user_id": 2
+    }
+  ]
+}

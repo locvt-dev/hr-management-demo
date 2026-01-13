@@ -1,3 +1,4 @@
+import DocxUploader from '@/components/UploadFile';
 import { Text } from '@chakra-ui/react';
 import {
   createBrowserRouter,
@@ -17,6 +18,7 @@ export const DASHBOARD_ROUTES: IRoute[] = [
     Component: (
       <>
         <Text>Dashboard</Text>
+        <DocxUploader />
       </>
     ),
     title: 'Dashboard',
@@ -26,7 +28,7 @@ export const DASHBOARD_ROUTES: IRoute[] = [
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Route path="/" element={<Text>Dashboard</Text>} />
+      <Route path="/" element={<DocxUploader />} />
     </Route>,
   ),
 );
