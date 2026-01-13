@@ -1,34 +1,44 @@
-import DocxUploader from '@/components/UploadFile';
-import { Text } from '@chakra-ui/react';
 import {
   createBrowserRouter,
   createRoutesFromElements,
+  Navigate,
   Route,
 } from 'react-router-dom';
+import { Suspense } from 'react';
 
-interface IRoute {
-  path: string;
-  Component: JSX.Element;
-  title: string;
-}
+// Layouts
+import { MainLayout } from '@/layouts';
 
-export const DASHBOARD_ROUTES: IRoute[] = [
-  {
-    path: '/',
-    Component: (
-      <>
-        <Text>Dashboard</Text>
-        <DocxUploader />
-      </>
-    ),
-    title: 'Dashboard',
-  },
-];
+// Routers
+import { HR_ROUTES } from './routers';
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Route path="/" element={<DocxUploader />} />
+      <Route
+        path="/"
+        element={<Navigate to="/so-do-co-cau-to-chuc" replace />}
+      />
+
+      {HR_ROUTES.map(({ path, Component, title }) => (
+        <Route key={path} element={<MainLayout title={title || ''} />}>
+          <Route
+            key={path}
+            path={path}
+            element={
+              <Suspense fallback={<div>Loading</div>}>
+                <Component />
+              </Suspense>
+            }
+            loader={() => ({ title })}
+          />
+        </Route>
+      ))}
     </Route>,
   ),
+  {
+    future: {
+      v7_relativeSplatPath: true,
+    },
+  },
 );
